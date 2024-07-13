@@ -10,7 +10,7 @@ const ProductCard = ({ name, image, price, handleViewDetails, _id }: any) => {
       <div className="p-4 text-center">
         <h3 className="font-semibold text-gray-800 text-2xl mb-2">{name}</h3>
         <p className="text-gray-600 text-lg  md:text-xl lg:text-2xl mb-6">${price}</p>
-        <div className="mt-3 flex justify-center">
+        <div className="mt-2  flex justify-center ">
           <button onClick={() => handleViewDetails(_id)} className="bg-gray-600 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded-full shadow-md transition duration-300">
             View Details
           </button>

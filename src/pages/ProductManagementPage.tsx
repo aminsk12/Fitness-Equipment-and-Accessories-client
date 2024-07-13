@@ -4,6 +4,7 @@ import ProgressBar from "../components/ui/global/ProgressBar";
 import { useDeleteProductMutation, useGetProductsQuery } from "../redux/features/product/productApi";
 import { TProduct } from "../types";
 import { toast } from "sonner";
+import { Helmet } from "react-helmet";
 
 const ProductManagementPage = () => {
   const { data: products, isLoading, error } = useGetProductsQuery({});
@@ -22,10 +23,25 @@ const ProductManagementPage = () => {
 
   return (
     <>
-    <div className="bg-slate-600 text-white w-full h-[280px] flex items-center px-5">
-        <div className="">
-          <h1 className="text-5xl font-bold">Products Management</h1>
-          <p className="font-semibold">Home / Products</p>
+     <Helmet>
+        <title>Fitness Club | Product Management</title>
+      </Helmet>
+    <div
+        className="hero min-h-96"
+        style={{
+          backgroundImage: "url(/public/img/b3.webp)",
+        }}
+      >
+        <div className="hero-overlay bg-opacity-40"></div>
+        <div className="hero-content text-neutral-content text-center">
+          <div className="max-w-full space-y-10">
+            <h1 className="mb-5 md:text-8xl text-4xl font-bold ">Welcome to Fitness Club Products Management</h1>
+            <p className=" mm:text-2xl">
+              Your one-stop shop for premium gym equipment and accessories.
+              Elevate your fitness journey with our top-quality products.
+            </p>
+            
+          </div>
         </div>
       </div> 
       <div className="overflow-x-auto mb-8">

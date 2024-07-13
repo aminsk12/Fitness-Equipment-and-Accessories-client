@@ -29,9 +29,9 @@ const Featured = () => {
       <h2 className="text-5xl text-center font-bold mb-10 russo-one-regular text-gray-700 mt-16">
         Featured
       </h2>
-        <div className="flex justify-center">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-x-28 gap-5">
-            {products?.data?.slice(0, 3).map((product: TProduct) => (
+        <div className="flex justify-center items-center">
+          <div className=" justify-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:gap-x-28 gap-5">
+            {products?.data?.slice(0, 4).map((product: TProduct) => (
               <ProductCard
                 _id={product._id}
                 handleViewDetails={handleViewDetails}

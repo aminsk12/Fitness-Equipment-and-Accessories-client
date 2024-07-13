@@ -1,45 +1,31 @@
-import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const Banner = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setTimeout(() => setIsVisible(true), 500);
-  }, []);
   return (
-    <div className="relative  text-gray-700 overflow-hidden h-screen">
-      <div className="container mx-auto px-6 py-16 md:py-24 lg:py-32 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center justify-between">
-          <div className="lg:w-1/2">
-            <h1 className="text-4xl russo-one-regular  text-gray-700 md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-              Welcome to FitFlex Essentials
-            </h1>
-            <p className="text-lg  md:text-xl lg:text-2xl mb-8">
+    <div>
+      <div
+        className="hero min-h-screen "
+        style={{
+          backgroundImage: "url(/public/img/banner1.jpg)",
+        }}
+      >
+        <div className="hero-overlay bg-opacity-40"></div>
+        <div className="hero-content text-neutral-content text-center">
+          <div className="max-w-full space-y-10">
+            <h1 className="mb-5 md:text-8xl text-4xl font-bold ">Welcome to Fitness Club</h1>
+            <p className=" mm:text-2xl">
               Your one-stop shop for premium gym equipment and accessories.
               Elevate your fitness journey with our top-quality products.
             </p>
-
             <NavLink
               to={"/products"}
-              className="inline-block px-8 py-3 bg-gray-600 hover:bg-gray-800 text-white text-lg font-semibold rounded-md shadow-md transition duration-300 ease-in-out transform hover:scale-105"
+              className="inline-block px-8 py-3 bg-white hover:bg-gray-800 text-black text-lg  rounded-md shadow-md transition duration-300 ease-in-out transform hover:scale-105  hover:text-white font-bold"
             >
               Shop Now
             </NavLink>
           </div>
-          <div className="lg:w-1/2 mt-10 lg:mt-0 flex justify-center">
-            <img
-              className={`w-full lg:w-10/12 h-auto bg-slate-100  object-cover rounded-lg  transition-transform duration-300  transform hover:scale-110 z-10  ${
-                isVisible ? "opacity-100 animate-pulse " : "opacity-0"
-              }`}
-              src="/public/images/18969559-removebg.png" // Replace with your image URL
-              alt="FitFlex Gym Equipment"
-            />
-          </div>
         </div>
       </div>
-      <div className="absolute inset-0 z-0 bg-cover bg-center opacity-50 "></div>{" "}
-      {/* Background image */}
     </div>
   );
 };

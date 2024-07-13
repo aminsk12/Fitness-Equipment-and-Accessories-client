@@ -12,6 +12,7 @@ import { useAppDispatch, useAppSelector } from "../redux/hooks";
 import { RootState } from "../redux/store";
 import { TProduct } from "../types";
 import { useGetProductsQuery } from "../redux/features/product/productApi";
+import { Helmet } from "react-helmet";
 
 const ProductsPage = () => {
   const dispatch = useAppDispatch();
@@ -64,13 +65,29 @@ const ProductsPage = () => {
 
   return (
     <>
-      <div className="bg-slate-600 text-white w-full h-[280px] flex items-center px-5 mb-10">
-        <div className="">
-          <h1 className="text-5xl font-bold">P R O D U C T S</h1>
-          <p className="font-semibold mt-3">Home / Products</p>
+     <Helmet>
+        <title>Fitness Club | Product</title>
+      </Helmet>
+
+      <div
+        className="hero min-h-96"
+        style={{
+          backgroundImage: "url(/public/img/b2.jpg)",
+        }}
+      >
+        <div className="hero-overlay bg-opacity-40"></div>
+        <div className="hero-content text-neutral-content text-center">
+          <div className="max-w-full space-y-10">
+            <h1 className="mb-5 md:text-8xl text-4xl font-bold ">Welcome to Fitness Club Product</h1>
+            <p className=" mm:text-2xl">
+              Your one-stop shop for premium gym equipment and accessories.
+              Elevate your fitness journey with our top-quality products.
+            </p>
+            
+          </div>
         </div>
       </div>
-      <div className="mb-8">
+      <div className="m-8">
         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 mb-8 lg:w-11/12 mx-auto">
           <SearchBar></SearchBar>
           {/* category */}
@@ -81,7 +98,7 @@ const ProductsPage = () => {
           <ClearFilterButton></ClearFilterButton>
         </div>
         <h2 className="text-5xl text-center font-bold mb-10 russo-one-regular text-gray-700 mt-16">
-          FitFlex Essential Products
+        Fitness Club Products
         </h2>
         {selectedCategory && (
           <div className="mb-4 lg:pl-16">

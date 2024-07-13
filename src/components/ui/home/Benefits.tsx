@@ -32,9 +32,9 @@ const Benefits = () => {
       <h2 className="text-5xl text-center font-bold mb-6 russo-one-regular text-gray-700 mt-16">
         Benefits of our product
       </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mt-16">
+        <div className="grid grid-cols-1 px-8 md:grid-cols-4 lg:grid-cols-4 gap-4 mt-16">
           {benefitsData.map((benefit, index) => (
-            <div key={index} className="text-center bg-white border p-4 rounded-lg lg:w-[500px] lg:mx-auto">
+            <div key={index} className="text-center border p-4 rounded-lg lg:w-[400px] lg:mx-auto">
               <img
                 src={benefit.image}
                 alt={benefit.title}

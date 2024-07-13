@@ -3,7 +3,7 @@ import { navLinks } from "../../../utils/navLinks";
 
 const Header = () => {
   return (
-    <div className="navbar bg-white shadow-sm p-6 sticky top-0 z-20">
+    <div className="navbar bg-white shadow-sm  sticky top-0 bg-opacity-30 z-10">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -41,10 +41,11 @@ const Header = () => {
             ))}
           </ul>
         </div>
-        <div className="flex items-center">
-          <img className="w-16 h-10 rounded-[100%]" src="/public/download.png" alt="FitFlex Logo" />
-          <a className="ml-2 text-3xl font-bold text-gray-800">
-          fitness club
+        <div className="flex items-center" >
+          
+          <a href="/" className="ml-2 flex justify-center items-center text-3xl font-bold text-gray-800">
+          <img className="w-20 h-20 " src="/public/download.png" alt=" Logo" />
+          Fitness Club
           </a>
         </div>
       </div>

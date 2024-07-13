@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import CartCard from "../components/ui/cart/CartCard";
 import {
   removeFromCart,
@@ -31,10 +32,25 @@ const CartPage = () => {
   };
   return (
     <div className="">
-      <div className="bg-slate-600 text-white w-full h-[280px] flex items-center px-5 mb-10">
-        <div className="">
-          <h1 className="text-5xl font-bold">C A R T</h1>
-          <p className="font-semibold mt-3">Home / Cart</p>
+       <Helmet>
+        <title>Fitness Club | Cart</title>
+      </Helmet>
+      <div
+        className="hero min-h-96"
+        style={{
+          backgroundImage: "url(/public/img/b4.webp)",
+        }}
+      >
+        <div className="hero-overlay bg-opacity-40"></div>
+        <div className="hero-content text-neutral-content text-center">
+          <div className="max-w-full space-y-10">
+            <h1 className="mb-5 md:text-8xl text-4xl font-bold ">Welcome to Fitness Club Product Cart</h1>
+            <p className=" mm:text-2xl">
+              Your one-stop shop for premium gym equipment and accessories.
+              Elevate your fitness journey with our top-quality products.
+            </p>
+            
+          </div>
         </div>
       </div>
       <div className="lg:w-9/12 mx-auto">
