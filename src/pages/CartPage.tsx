@@ -6,6 +6,7 @@ import {
 } from "../redux/features/cart/cartSlice";
 import { useAppDispatch, useAppSelector } from "../redux/hooks";
 import { RootState } from "../redux/store";
+import banner from "../assets/img/b4.webp"
 
 const CartPage = () => {
   //grab cart data from local state
@@ -38,7 +39,7 @@ const CartPage = () => {
       <div
         className="hero min-h-96"
         style={{
-          backgroundImage: "url(/public/img/b4.webp)",
+          backgroundImage: `url(${banner})`,
         }}
       >
         <div className="hero-overlay bg-opacity-40"></div>

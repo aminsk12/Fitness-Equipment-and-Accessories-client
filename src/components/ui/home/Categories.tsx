@@ -22,7 +22,7 @@ const Categories = () => {
         Categories
       </h2>
       <p className="text-gray-600 text-lg  md:text-xl lg:text-2xl mb-12 text-center ">
-        Discover our diverse range of premium products at FitFlex Essentials.
+        Discover our diverse range of premium products at Fitness  Club Essentials.
         Explore top-quality gym equipment for strength training, cutting-edge
         cardio equipment for endurance, and essential gym accessories to enhance
         your workout experience. Elevate your fitness journey with our expertly

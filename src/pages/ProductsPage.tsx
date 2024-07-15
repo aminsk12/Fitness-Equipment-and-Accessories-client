@@ -13,6 +13,8 @@ import { RootState } from "../redux/store";
 import { TProduct } from "../types";
 import { useGetProductsQuery } from "../redux/features/product/productApi";
 import { Helmet } from "react-helmet";
+import banner from "../assets/img/b2.jpg"
+
 
 const ProductsPage = () => {
   const dispatch = useAppDispatch();
@@ -72,7 +74,7 @@ const ProductsPage = () => {
       <div
         className="hero min-h-96"
         style={{
-          backgroundImage: "url(/public/img/b2.jpg)",
+          backgroundImage: `url(${banner})`,
         }}
       >
         <div className="hero-overlay bg-opacity-40"></div>

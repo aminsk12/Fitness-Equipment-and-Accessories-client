@@ -5,6 +5,8 @@ import { useDeleteProductMutation, useGetProductsQuery } from "../redux/features
 import { TProduct } from "../types";
 import { toast } from "sonner";
 import { Helmet } from "react-helmet";
+import banner from "../assets/img/b3.webp"
+
 
 const ProductManagementPage = () => {
   const { data: products, isLoading, error } = useGetProductsQuery({});
@@ -29,7 +31,7 @@ const ProductManagementPage = () => {
     <div
         className="hero min-h-96"
         style={{
-          backgroundImage: "url(/public/img/b3.webp)",
+          backgroundImage: `url(${banner})`,
         }}
       >
         <div className="hero-overlay bg-opacity-40"></div>

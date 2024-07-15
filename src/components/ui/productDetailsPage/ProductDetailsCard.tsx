@@ -1,5 +1,5 @@
-import  { useState } from 'react';
-import { TProduct } from '../../../types';
+import { useState } from "react";
+import { TProduct } from "../../../types";
 
 type TProductDetailsProps = {
   product: TProduct;
@@ -25,34 +25,39 @@ const ProductDetailsCard = ({
   };
 
   return (
-    <>
-      <div className="card card-side bg-base-100 shadow-xl mb-8">
-        <figure>
-          <img
-            className="w-full md:h-96"
-            src={product.image}
-            alt={product.name}
-          />
-        </figure>
-        <div className="card-body">
-          <h1 className="text-3xl font-bold mb-0">{product.name}</h1>
-          <p className="text-xl mb-0">Price: ${product.price}</p>
-          <p className="mb-0">Stock: {updatedStock}</p> {/* Use updatedStock here */}
-          <p className="mb-0">Description: {product.description}</p>
-          <div className="card-actions justify-end">
-            <button
-              className={`btn inline-block px-8 py-3 bg-gray-600 hover:bg-gray-800 text-white text-lg font-semibold rounded-md shadow-md transition duration-300 ease-in-out transform hover:scale-105 ${
-                isProductOutOfStock ? 'btn-disabled' : 'btn'
-              }`}
-              onClick={handleAddToCartClick} 
-              disabled={isProductOutOfStock}
-            >
-              {isProductOutOfStock ? 'Out of Stock' : 'Add to Cart'}
-            </button>
+    <div className="container m-20 bg-base-100 mx-auto">
+      <div className="hero-content flex-col lg:flex-row">
+          <div className="flex-1 shadow-xl mb-8">
+            <figure>
+              <img
+                className=" rounded-xl"
+                src={product.image}
+                alt={product.name}
+              />
+            </figure>
+          </div>
+          <div className="flex-1">
+            <div className="card-body space-y-7">
+              <h1 className="text-3xl font-bold mb-0">{product.name}</h1>
+              <p className="text-xl mb-0">Price: ${product.price}</p>
+              <p className="mb-0">Stock: {updatedStock}</p>{" "}
+              {/* Use updatedStock here */}
+              <p className="mb-0">Description: {product.description}</p>
+            </div>
+            <div className="card-actions justify-end">
+              <button
+                className={`btn inline-block px-8 py-3 md:mt-20 bg-gray-600 hover:bg-gray-800 text-white text-lg font-semibold rounded-md shadow-md transition duration-300 ease-in-out transform hover:scale-105 ${
+                  isProductOutOfStock ? "btn-disabled" : "btn"
+                }`}
+                onClick={handleAddToCartClick}
+                disabled={isProductOutOfStock}
+              >
+                {isProductOutOfStock ? "Out of Stock" : "Add to Cart"}
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-    </>
+    </div>
   );
 };
 

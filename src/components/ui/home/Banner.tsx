@@ -1,12 +1,12 @@
 import { NavLink } from "react-router-dom";
-
+import banner from "../../../assets/img/banner1.jpg"
 const Banner = () => {
   return (
     <div>
       <div
         className="hero min-h-screen "
         style={{
-          backgroundImage: "url(/public/img/banner1.jpg)",
+          backgroundImage: `url(${banner})`,
         }}
       >
         <div className="hero-overlay bg-opacity-40"></div>

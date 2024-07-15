@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { navLinks } from "../../../utils/navLinks";
+import logo from "../../../assets/img/download.png"
 
 const Header = () => {
   return (
@@ -44,7 +45,7 @@ const Header = () => {
         <div className="flex items-center" >
           
           <a href="/" className="ml-2 flex justify-center items-center text-3xl font-bold text-gray-800">
-          <img className="w-20 h-20 " src="/public/download.png" alt=" Logo" />
+          <img className="w-20 h-20 " src = {logo} alt=" Logo" />
           Fitness Club
           </a>
         </div>

@@ -13,7 +13,7 @@ const Team = () => {
             <span className="indicator-item badge badge-secondary h-12 p-5">
               Mr. Micheal Brook
               <br />
-              CEO of FitFlex Essentials
+              CEO of Fitness  Club Essentials
             </span>
             <div className="h-32 w-9/12 mx-auto rounded-lg">
               <img
@@ -57,7 +57,7 @@ const Team = () => {
       </div>
       <div className="w-9/12 mx-auto mt-7">
         <h1 className="text-center text-slate-400">
-          At FitFlex, we pride ourselves on having a dynamic and dedicated team
+          At Fitness  Club, we pride ourselves on having a dynamic and dedicated team
           committed to revolutionizing the fitness industry. Our leadership is
           driven by a shared vision of innovation, quality, and exceptional
           customer service. With a diverse range of expertise and a relentless

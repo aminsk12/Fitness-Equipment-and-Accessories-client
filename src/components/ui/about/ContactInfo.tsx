@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { FormEvent, useState } from "react";
+import { toast } from "sonner";
 
 const ContactInfo = () => {
   const [feedback, setFeedback] = useState("");
@@ -11,7 +12,7 @@ const ContactInfo = () => {
   const handleSubmit = (event: FormEvent) => {
     event.preventDefault();
     // Handle the form submission logic here
-    alert("Thank you for your feedback!");
+    toast.success("Thank you for your feedback!");
     setFeedback("");
   };
   return (
@@ -27,18 +28,18 @@ const ContactInfo = () => {
       <div className="flex flex-col md:flex-row justify-around items-center mb-6">
         <div className="mb-6 md:mb-0">
           <h3 className="text-xl font-semibold text-gray-700">Email</h3>
-          <p className="text-gray-600">support@fitflex.com</p>
+          <p className="text-gray-600">support@fitness.com</p>
         </div>
         <div className="mb-6 md:mb-0">
           <h3 className="text-xl font-semibold text-gray-700">Phone</h3>
-          <p className="text-gray-600">+1 (555) 123-4567</p>
+          <p className="text-gray-600">+91 8100000017</p>
         </div>
         <div className="mb-6 md:mb-0">
           <h3 className="text-xl font-semibold text-gray-700">Address</h3>
           <p className="text-gray-600">
-            123 FitFlex Avenue
+            204 Fitness Avenue
             <br />
-            Fitness City, FC 12345
+            Fitness City, FC 200070
           </p>
         </div>
       </div>

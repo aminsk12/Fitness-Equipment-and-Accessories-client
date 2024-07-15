@@ -52,7 +52,7 @@ const CartCard = ({
                           <button
                             className="inline-block px-3 py-1 bg-gray-600 hover:bg-gray-800 text-white text-lg font-semibold rounded-md shadow-md transition duration-300 ease-in-out transform hover:scale-105"
                             onClick={() =>
-                              handleUpdateQuantity(item._id, item.quantity - 1)
+                              handleUpdateQuantity(item._id as string, item.quantity - 1)
                             }
                             disabled={item.quantity <= 1}
                           >
@@ -62,7 +62,7 @@ const CartCard = ({
                           <button
                             className="inline-block px-3 py-1 bg-gray-600 hover:bg-gray-800 text-white text-lg font-semibold rounded-md shadow-md transition duration-300 ease-in-out transform hover:scale-105"
                             onClick={() =>
-                              handleUpdateQuantity(item._id, item.quantity + 1)
+                              handleUpdateQuantity(item._id as string, item.quantity + 1)
                             }
                             disabled={item.quantity >= item.stock}
                           >
@@ -76,7 +76,7 @@ const CartCard = ({
                       <td className="border px-4 py-2">
                         <button
                           className="btn btn-error btn-xs"
-                          onClick={() => handleRemoveFromCart(item._id)}
+                          onClick={() => handleRemoveFromCart(item._id as string)}
                         >
                           Remove
                         </button>
